@@ -433,6 +433,87 @@ option {
   font-size: 14px;
 }
 
+.tabs-labels {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  row-gap: 15px;
+}
+
+.tabs-labels > label {
+  text-align: center;
+  cursor: pointer;
+
+  /* плавное изменение цвета при наведении курсора */
+  transition: 0.15s ease-out; 
+}
+
+.tabs-labels label:hover {
+  color:#8a8a8a;
+}
+
+/* none, чтобы не показывать радиокнопку */
+.tabs > input[type='radio'] {
+  display: none;
+}
+
+#tab-btn-1:checked ~ .tabs-labels #tab-btn-label-1,
+#tab-btn-2:checked ~ .tabs-labels #tab-btn-label-2,
+#tab-btn-3:checked ~ .tabs-labels #tab-btn-label-3,
+#tab-btn-4:checked ~ .tabs-labels #tab-btn-label-4,
+#tab-btn-5:checked ~ .tabs-labels #tab-btn-label-5,
+#tab-btn-6:checked ~ .tabs-labels #tab-btn-label-6 {
+  color: #4ca149;
+}
+
+.hr-menu {
+  background-color:#f9f9f9;
+  height: 1px;
+}
+
+.header {
+  margin: 60px 0px;
+  margin-bottom: 24px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.dish-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--grid-gap-rest-y) var(--grid-gap-rest-x);
+}
+
+.dish-card {
+  display: flex;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.dish-desc {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.dish-name {
+  margin-bottom: 6px;
+}
+
+.dish-name-sub {
+  font-size: 0.8125rem;
+  color: #8a8a8a;
+}
+
+.dish-price {
+  font-weight: 600;
+}
+
 @media screen and (min-width: 769px) {
   .container {
     max-width: 1124px;
@@ -454,6 +535,8 @@ option {
 }
 
 :root {
+--grid-gap-rest-x: 10px;
+--grid-gap-rest-y: 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: 16px;
