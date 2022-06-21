@@ -222,10 +222,6 @@ body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquot
   color: #262626;
 }
 
-.footer {
-  background-color: #262626;
-}
-
 hr {
   display: block;
   height: 1px;
@@ -311,7 +307,7 @@ hr {
   width: 12rem;
 }
 
-option {
+.option {
   font-weight: normal;
   display: block;
   white-space: nowrap;
@@ -514,6 +510,51 @@ option {
   font-weight: 600;
 }
 
+.dish-pic {
+  object-fit: cover;
+}
+
+.tabs {
+  padding-bottom: 40px;
+}
+
+.footer {
+  padding-top: 15px;
+    padding-bottom: 15px;
+    max-width: 100%;
+    height: 100%;
+    background-color: #262626;
+}
+
+.scroller-area {
+  position: fixed;
+  bottom: calc(var(--container-padding-x) * 3);
+  right: var(--container-padding-x);
+  z-index: 2;
+  width: var(--scroller-size);
+  height: var(--scroller-size);
+  background: var(--color-main) url(https://c-c-6ypo8.github.io/ht_Basics/ubereats/assets/arrow-up.svg) no-repeat;
+  background-position: center center;
+  border-radius: 5px;
+  display: block;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.scroller-area:hover {
+  background-color: #3da142;
+  transition: 0.3s ease-out;
+}
+
+.scroller-area:active {
+  background-color: #48b64d;
+  transition: 0.3s ease-out;
+}
+
+.scroller-area:checked {
+  transition: 0.3s ease-out;
+}
+
 @media screen and (min-width: 769px) {
   .container {
     max-width: 1124px;
@@ -537,9 +578,25 @@ option {
 :root {
 --grid-gap-rest-x: 10px;
 --grid-gap-rest-y: 50px;
+--container-padding-x: 8px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #262626;
+
+  --color-main: #5cbc61;
+    --color-dark: #262626;
+    --color-light: white;
+    --color-lightergray: #f9f9f9;
+    --color-lightgray: #efefef;
+    --color-gray: #cacaca;
+    --color-darkgray: #8a8a8a;
+    --color-darkergray: #5c5c5c;
+    --color-darkestgray: #3b3b3b;
+    --color-placeholder: var(--color-gray);
+    --border-radius: 3px;
+    --scroller-size: 80px;
+    --scroller-size-small: 64px;
+    --max-width: 1124px;
 }
 /*# sourceMappingURL=Uber.css.map */
